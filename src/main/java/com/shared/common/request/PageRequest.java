@@ -18,41 +18,27 @@ public class PageRequest implements Serializable {
 	
 	private Integer pageNumber;
 	
-	private Integer size;
+	private Integer pageSize;
 
-	/**
-	 * @return the pageNumber
-	 */
 	public Integer getPageNumber() {
 		return pageNumber;
 	}
 
-	/**
-	 * @param pageNumber the pageNumber to set
-	 */
 	public void setPageNumber(Integer pageNumber) {
 		this.pageNumber = pageNumber;
 	}
 
-	/**
-	 * @return the size
-	 */
-	public Integer getSize() {
-		return size;
+	public Integer getPageSize() {
+		return pageSize;
 	}
 
-	/**
-	 * @param size the size to set
-	 */
-	public void setSize(Integer size) {
-		this.size = size;
+	public void setPageSize(Integer pageSize) {
+		this.pageSize = pageSize;
 	}
 
-	/* (non-Javadoc)
-	 * @see java.lang.Object#toString()
-	 */
 	@Override
 	public String toString() {
-		return "PageRequest [pageNumber=" + pageNumber + ", size=" + size + "]";
+		return "PageRequest [pageNumber=" + pageNumber + ", pageSize=" + pageSize + "]";
 	}
+	
 }
