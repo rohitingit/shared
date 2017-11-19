@@ -4,15 +4,15 @@ package com.shared.common.exception;
  * @author Rohit
  *
  */
-public class FoundExcetion extends RequestException {
+public class ConflictExcetion extends RequestException {
 
 	private static final long serialVersionUID = 1L;
 
-	public FoundExcetion(String message) {
+	public ConflictExcetion(String message) {
 		super(message);
 	}
 
-	public FoundExcetion(Exception exception) {
+	public ConflictExcetion(Exception exception) {
 		super(exception);
 	}
 

@@ -45,10 +45,10 @@ public class GlobalExceptionHandler {
 		return response;
 	}
 
-	@ResponseStatus(HttpStatus.OK)
-	@ExceptionHandler(value=FoundExcetion.class)
+	@ResponseStatus(HttpStatus.CONFLICT)
+	@ExceptionHandler(value=ConflictExcetion.class)
 	@ResponseBody
-	public BaseErrorResponse handleFoundException(HttpServletRequest request , FoundExcetion ex) {
+	public BaseErrorResponse handleFoundException(HttpServletRequest request , ConflictExcetion ex) {
 		logger.error("## Found Excetion Error Occured : " + ex.getMessage());
 		BaseErrorResponse response=new BaseErrorResponse();
 		response.setResponseMessage(ex.getMessage());
@@ -56,7 +56,7 @@ public class GlobalExceptionHandler {
 		return response;
 	}
 	
-	@ResponseStatus(HttpStatus.NOT_FOUND)
+	@ResponseStatus(HttpStatus.NO_CONTENT)
 	@ExceptionHandler(value=NotFoundException.class)
 	@ResponseBody
 	public BaseErrorResponse handleNotFoundException(HttpServletRequest request , NotFoundException ex) {
