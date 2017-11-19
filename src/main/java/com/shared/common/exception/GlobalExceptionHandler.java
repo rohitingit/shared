@@ -46,9 +46,9 @@ public class GlobalExceptionHandler {
 	}
 
 	@ResponseStatus(HttpStatus.CONFLICT)
-	@ExceptionHandler(value=ConflictExcetion.class)
+	@ExceptionHandler(value=ConflictException.class)
 	@ResponseBody
-	public BaseErrorResponse handleFoundException(HttpServletRequest request , ConflictExcetion ex) {
+	public BaseErrorResponse handleFoundException(HttpServletRequest request , ConflictException ex) {
 		logger.error("## Found Excetion Error Occured : " + ex.getMessage());
 		BaseErrorResponse response=new BaseErrorResponse();
 		response.setResponseMessage(ex.getMessage());
