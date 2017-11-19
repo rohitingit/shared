@@ -52,7 +52,7 @@ public class GlobalExceptionHandler {
 		logger.error("## Found Excetion Error Occured : " + ex.getMessage());
 		BaseErrorResponse response=new BaseErrorResponse();
 		response.setResponseMessage(ex.getMessage());
-		response.setStatus(HttpServletResponse.SC_OK);
+		response.setStatus(HttpServletResponse.SC_CONFLICT);
 		return response;
 	}
 	
@@ -63,7 +63,7 @@ public class GlobalExceptionHandler {
 		logger.error("## Not Found Exception Error Occured :" + ex.getMessage());
 		BaseErrorResponse response=new BaseErrorResponse();
 		response.setResponseMessage(ex.getMessage());
-		response.setStatus(HttpServletResponse.SC_NOT_FOUND);
+		response.setStatus(HttpServletResponse.SC_NO_CONTENT);
 		return response;
 	}
 	
