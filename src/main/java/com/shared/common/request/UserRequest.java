@@ -10,6 +10,18 @@ public class UserRequest implements Serializable {
 	private static final long serialVersionUID = -4095890266848846871L;
 
 	private Long userId;
+	
+	private String username;
+	
+	private String loginWith;
+	
+	private String password;
+	
+	private String socialId;
+	
+	private String email;;
+	
+	private String deviceId;
 
 	private String firstName;
 
@@ -17,11 +29,7 @@ public class UserRequest implements Serializable {
 
 	private String lastName;
 
-	private String email;
-
 	private String mobileNo;
-
-	private String password;
 
 	private String dob;
 
@@ -47,6 +55,38 @@ public class UserRequest implements Serializable {
 
 	public void setUserId(Long userId) {
 		this.userId = userId;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+	
+	public String getLoginWith() {
+		return loginWith;
+	}
+
+	public void setLoginWith(String loginWith) {
+		this.loginWith = loginWith;
+	}
+
+	public String getSocialId() {
+		return socialId;
+	}
+
+	public void setSocialId(String socialId) {
+		this.socialId = socialId;
+	}
+
+	public String getDeviceId() {
+		return deviceId;
+	}
+
+	public void setDeviceId(String deviceId) {
+		this.deviceId = deviceId;
 	}
 
 	public String getFirstName() {
