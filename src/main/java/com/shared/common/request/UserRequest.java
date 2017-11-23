@@ -1,6 +1,7 @@
 package com.shared.common.request;
 
 import java.io.Serializable;
+import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 
@@ -10,17 +11,17 @@ public class UserRequest implements Serializable {
 	private static final long serialVersionUID = -4095890266848846871L;
 
 	private Long userId;
-	
+
 	private String username;
-	
+
 	private String loginWith;
-	
+
 	private String password;
-	
+
 	private String socialId;
-	
+
 	private String email;;
-	
+
 	private String deviceId;
 
 	private String firstName;
@@ -49,6 +50,12 @@ public class UserRequest implements Serializable {
 
 	private Long tzOffset;
 
+	private List<CertificationRequest> certifications;
+
+	private List<DocumentRequest> documents;
+
+	private List<QualificationRequest> qualifications;
+
 	public Long getUserId() {
 		return userId;
 	}
@@ -64,7 +71,7 @@ public class UserRequest implements Serializable {
 	public void setUsername(String username) {
 		this.username = username;
 	}
-	
+
 	public String getLoginWith() {
 		return loginWith;
 	}
@@ -207,6 +214,30 @@ public class UserRequest implements Serializable {
 
 	public void setTzOffset(Long tzOffset) {
 		this.tzOffset = tzOffset;
+	}
+
+	public List<CertificationRequest> getCertifications() {
+		return certifications;
+	}
+
+	public void setCertifications(List<CertificationRequest> certifications) {
+		this.certifications = certifications;
+	}
+
+	public List<DocumentRequest> getDocuments() {
+		return documents;
+	}
+
+	public void setDocuments(List<DocumentRequest> documents) {
+		this.documents = documents;
+	}
+
+	public List<QualificationRequest> getQualifications() {
+		return qualifications;
+	}
+
+	public void setQualifications(List<QualificationRequest> qualifications) {
+		this.qualifications = qualifications;
 	}
 
 	@Override
