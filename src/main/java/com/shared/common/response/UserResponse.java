@@ -3,47 +3,55 @@ package com.shared.common.response;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Date;
+import java.util.List;
 
-public class UserResponse extends BaseResponse implements Serializable{
+public class UserResponse extends BaseResponse implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	private Long userId;
-	
+
 	private String firstName;
-	
+
 	private String middleName;
-	
+
 	private String lastName;
-	
+
 	private String email;
-	
+
 	private String mobileNo;
-	
+
 	private String password;
-	
+
 	private LocalDate dob;
-	
+
 	private Long roleId;
-	
+
 	private String gender;
-	
+
 	private String profileImageUrl;
-	
+
 	private Boolean isEmailVerified;
-	
+
 	private Boolean isMobileVerified;
-	
+
 	private String signupStage;
-	
+
 	private String profileStatus;
-	
+
 	private Long tzOffset;
-	
-	private LocalDateTime createdDate;
-	
-	private LocalDateTime modifiedDate;
-	
+
+	private Date createdDate;
+
+	private Date modifiedDate;
+
+	private List<CertificationResponse> certifications;
+
+	private List<DocumentResponse> documents;
+
+	private List<QualificationResponse> qualifications;
+
 	public Long getUserId() {
 		return userId;
 	}
@@ -172,20 +180,65 @@ public class UserResponse extends BaseResponse implements Serializable{
 		this.tzOffset = tzOffset;
 	}
 
-	public LocalDateTime getCreatedDate() {
+	public Date getCreatedDate() {
 		return createdDate;
 	}
 
-	public void setCreatedDate(LocalDateTime createdDate) {
+	public void setCreatedDate(Date createdDate) {
 		this.createdDate = createdDate;
 	}
 
-	public LocalDateTime getModifiedDate() {
+	public Date getModifiedDate() {
 		return modifiedDate;
 	}
 
-	public void setModifiedDate(LocalDateTime modifiedDate) {
+	public void setModifiedDate(Date modifiedDate) {
 		this.modifiedDate = modifiedDate;
+	}
+
+	/**
+	 * @return the certifications
+	 */
+	public List<CertificationResponse> getCertifications() {
+		return certifications;
+	}
+
+	/**
+	 * @param certifications
+	 *            the certifications to set
+	 */
+	public void setCertifications(List<CertificationResponse> certifications) {
+		this.certifications = certifications;
+	}
+
+	/**
+	 * @return the documents
+	 */
+	public List<DocumentResponse> getDocuments() {
+		return documents;
+	}
+
+	/**
+	 * @param documents
+	 *            the documents to set
+	 */
+	public void setDocuments(List<DocumentResponse> documents) {
+		this.documents = documents;
+	}
+
+	/**
+	 * @return the qualifications
+	 */
+	public List<QualificationResponse> getQualifications() {
+		return qualifications;
+	}
+
+	/**
+	 * @param qualifications
+	 *            the qualifications to set
+	 */
+	public void setQualifications(List<QualificationResponse> qualifications) {
+		this.qualifications = qualifications;
 	}
 
 	@Override
@@ -197,5 +250,5 @@ public class UserResponse extends BaseResponse implements Serializable{
 				+ signupStage + ", profileStatus=" + profileStatus + ", tzOffset=" + tzOffset + ", createdDate="
 				+ createdDate + ", modifiedDate=" + modifiedDate + "]";
 	}
-	
+
 }
